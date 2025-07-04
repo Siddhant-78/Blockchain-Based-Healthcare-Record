@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Blockchain-Based Healthcare Record 📋🔐
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A decentralized, secure, and patient-centric system for managing healthcare records using blockchain technology.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔍 Features
 
-### `npm start`
+* **Immutable Record Storage**
+  Healthcare records are stored on-chain using smart contracts to ensure data integrity and tamper-proof audit trails.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Role-Based Access Control**
+  Doctors and patients have separate private keys; smart contracts verify access permissions before allowing record retrieval or updates.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Patient-Doctor Authorization Flow**
+  Patients authorize doctors to access records via blockchain transactions; doctors can only view/update once granted permission.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **Blockchain & Smart Contracts**: Solidity on Ethereum  testnet sepolia
+* **Backend**: Node.js + Express 
+* **Frontend**: React.js with  Ethers.js integration
+* **Wallet Integration**: MetaMask (for user key management & signing)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Quick Start
 
-### `npm run eject`
+1. **Clone the repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/Siddhant-78/Blockchain-Based-Healthcare-Record.git
+   cd Blockchain-Based-Healthcare-Record
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd Blockchain-Based-Healthcare-Record
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Deploy Smart Contracts**
 
-## Learn More
+   This project is deployed the contract on the sepolia testnet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Launch webapp**
 
-### Code Splitting
+   ```bash
+   cd Blockchain-Based-Healthcare-Record
+   npm start
+   
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. **Use the App**
 
-### Analyzing the Bundle Size
+   * Connect MetaMask to sepolia (or chosen testnet)
+   * Register as a person
+   * Patients can upload records, authorize person
+   * Authorized person can retrieve/view records
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧹 System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+[Frontend (React/Web3.js)] ↔ [MetaMask / Wallet]
+       ↓                                     ↓
+[Backend API (Node.js/Express)] ↔ [Smart Contracts (Ethereum)]
+```
 
-### Advanced Configuration
+* Frontend → MetaMask connects to smart contracts for on-chain interactions.
+* Backend reads data from contracts or fetches off-chain assets (e.g. imaging) via IPFS.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🙏 Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, feature requests or bug reports are welcome!
+Please raise an issue or submit a pull request with a clear description.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+
+This project is MIT‑licensed. See the [LICENSE](LICENSE) file for details.
+
