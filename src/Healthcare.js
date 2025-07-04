@@ -25,7 +25,7 @@ const Healthcare = () => {
   const [recordIndex, setRecordIndex] = useState('');
 
 
-  const contractAddress = "0x338B91531D30659af3B7ed4F555d6e46015B159F";
+  const contractAddress = "Add your contract address";
 
   useEffect(() => {
     const connectWallet = async () => {
